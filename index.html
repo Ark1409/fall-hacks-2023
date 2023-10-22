@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="calendar.png">
+        <link rel="stylesheet" type="text/css" href="home-style.css">
+        <link rel="stylesheet" type="text/css" href="nav-style.css">
+        <script src="nav-script.js"></script>
+        <title>Twinz Work | Home</title> 
+    </head>
+    <body id="page">
+        <nav id="global-nav">
+            <ul class="nav-items">
+                <li class="nav-item nav-selected">Habits</li>
+                <li class="nav-item">Money</li>
+            </ul>
+        </nav>
+        <main id="tracker-container">
+            <div class="tracker">
+                <div id="tracker-header">
+                    <div id="tracker-greeting">Hey there, Bernard (Riemann)</div>
+                    <div id="tracker-main-task">5 hrs 42 mins till bedtime</div>
+                </div>
+                <div id="tracker-progress">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div id="tracker-progress-day">Mon, Feb 18</div>
+                        <div style="display: flex; justify-content: right; flex: 1;">
+                            <div class="circle-button circle-left-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 256 512">
+                                    <path d="M9.4 278.6c-12.5-12.5-12.5-32.8 0-45.3l128-128c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 256c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-128-128z" />
+                                </svg>
+                            </div>
+                            <div class="circle-button circle-right-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 256 512">
+                                    <path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <!-- Progress bar here -->
+                    </div>
+                    <div class="progress-text">
+                        <!-- Progress text here -->
+                        50% of daily goal achieved
+                    </div>
+                </div>
+                <div id="tracker-calendar">
+                    <div id="tracker-calendar-top">
+                        <div id="tracker-calendar-view-type">
+                            <div class="selected">Week</div>
+                            <div>Month</div>
+                            <div>Year</div>
+                            <div>All Time</div>
+                        </div>
+                        <div id="add-habit">
+                            <div class="add-habit-text">
+                                <span style="font-size: 1.5rem;">+</span> &nbsp; Add Habit
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tracker-calendar-middle">
+                        <div style="display: flex; flex: 1;">
+                            <div class="circle-button circle-left-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 256 512">
+                                    <path d="M9.4 278.6c-12.5-12.5-12.5-32.8 0-45.3l128-128c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 256c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-128-128z" />
+                                </svg>
+                            </div>
+                            <div class="circle-button circle-right-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 256 512">
+                                    <path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div >
+                            Mon, 2/4 - Sun, 2/4
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>  
+                </div>
+                <div id="tracker-tracking-list">
+                    <div class="tracking-list-item">
+                        <div>Read <span>:</span></div>
+                        <div>Completed <span>Undo</span></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

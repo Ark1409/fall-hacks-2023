@@ -1,0 +1,244 @@
+/* 
+*	Main style
+*/
+
+@import url('https://fonts.cdnfonts.com/css/glocs');
+@import url('https://fonts.cdnfonts.com/css/arista-20');
+@import url('https://fonts.googleapis.com/css?family=Varela Round');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    overflow-x: hidden;
+    font-family: 'Varela Round', 'Arista 2.0', 'Poppins', sans-serif;
+
+    --text-color: #2c2c34;
+    --letter-spacing: 1px;
+    --font-weight: 400;
+
+    font-size: 16px;
+    font-weight: var(--font-weight);
+    letter-spacing: var(--letter-spacing);
+    color: var(--text-color);
+    background: linear-gradient(-45deg, #4fa0e2, #9198e5, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    transition: font-size 0.3s;
+    animation: bg-animation 15s linear 0s infinite normal forwards;
+}
+
+#page {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    height: 100vh;
+}
+
+#tracker-container {
+    display: flex;
+    flex: 10;
+}
+
+.tracker {
+    flex: 1;
+    background-color: white;
+    border-radius: 25px;
+    margin: 4%;
+    padding: 5% 4%;
+
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1.9fr 1fr;
+    grid-template-areas:
+        'header progress'
+        'content tracking-list';
+    gap: 0.5em;
+}
+
+.tracker #tracker-header {
+    grid-area: 'header';
+}
+
+.tracker #tracker-greeting {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.tracker #tracker-main-task {
+    font-size: 1.2rem;
+    color: gray;
+    margin-left: 0.2rem;
+}
+
+.tracker #tracker-progress {
+    grid-area: 'progress';
+}
+
+.tracker #tracker-progress .progress-bar {
+    position: relative;
+    height: 5%;
+    margin-top: 5%;
+
+    border-radius: 1rem;
+    background-color: #EEEEEE;
+}
+
+.tracker #tracker-progress .progress-bar::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    border-radius: 1rem;
+    background-color: #5197d7;
+}
+
+.tracker #tracker-progress .progress-text {
+    display: flex;
+    justify-content: right;
+
+    margin-top: 4%;
+    margin-right: 3%;
+}
+
+.tracker #tracker-progress-day {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* margin-bottom: 0.5rem; */
+}
+
+.tracker .circle-button {
+    border-radius: 50%;
+    border: 2px solid #ecf4fb;
+    aspect-ratio: 1 / 1;
+    padding: 2% 6%;
+    margin-left: 7%;
+    height: 100%;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    fill: var(--text-color);
+
+    transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.tracker .circle-button:hover {
+    background-color: var(--text-color);
+    fill: #ecf4fb;
+    cursor: pointer;
+}
+
+.tracker #tracker-calendar {
+    display: flex;
+    flex-direction: column;
+}
+
+.tracker #tracker-calendar-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tracker #tracker-calendar-top>div {}
+
+.tracker #tracker-calendar-view-type {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ecf4fb;
+    border-radius: 2rem;
+    align-items: center;
+}
+
+.tracker #tracker-calendar-view-type>div {
+    color: #94a0ae;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    margin: 0% 2%;
+    padding: 1% 0;
+    width: 100%;
+    text-align: center;
+    text-wrap: nowrap;
+}
+
+.tracker #tracker-calendar-view-type>div:hover {
+    cursor: pointer;
+}
+
+.tracker #tracker-calendar-view-type .selected {
+    background-color: white;
+    color: black;
+}
+
+.tracker #tracket-tracking-list {
+    grid-area: 'tracking-list';
+    display: flex;
+}
+
+.tracker #add-habit {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: var(--text-color); */
+}
+
+.tracker #add-habit .add-habit-text {
+    padding: 1% 7%;
+    border-radius: 10rem;
+    border: 0.25rem solid #ecf4fb;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: wh;
+    color: #5197d7;
+    font-weight: bold;
+
+    transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.tracker #add-habit .add-habit-text:hover {
+    cursor: pointer;
+    color: white;
+    border-color: #5197d7;
+    background-color: #5197d7;
+}
+
+.tracker #tracker-tracking-list {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 1rem;
+    border: 0.25rem solid #ecf4fb;
+}
+
+.tracker #tracker-tracking-list .tracking-list-item {
+    background-color: #fcae0d;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

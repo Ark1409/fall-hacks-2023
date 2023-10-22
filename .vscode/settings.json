@@ -1,0 +1,10 @@
+{
+    "html.completion.attributeDefaultValue": "empty",
+    "liveshare.allowGuestTaskControl": true,
+    "liveshare.allowGuestDebugControl": true,
+    "liveshare.alwaysFollowHost": false,
+    "liveshare.languages.allowGuestCommandControl": true,
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
+    "html.autoClosingTags": false
+}
