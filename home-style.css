@@ -221,12 +221,24 @@
     display: flex;
     flex-direction: column;
 
+    padding: 5%;
     border-radius: 1rem;
     border: 0.25rem solid #ecf4fb;
 }
 
 .tracker #tracker-tracking-list .tracking-list-item {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 1rem;
+    padding: 0 1rem;
+    color: #ecf4fb;
     background-color: #fcae0d;
+}
+
+.tracker #tracker-tracking-list .tracking-list-item>div {
+    display: flex;
+    justify-content: space-between;
 }
 
 @keyframes bg-animation {
